@@ -19,7 +19,7 @@ Route::get('/Witt', function () {
         return redirect()->route('calendar.index'); // Oder 'dashboard', je nach deiner Route
     }
     // Wenn nicht eingeloggt -> Login
-    return redirect()->route('login');
+    return redirect()->route('Log_FMS_in');
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {

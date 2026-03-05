@@ -12,16 +12,16 @@ use App\Http\Controllers\DamageController; // <--- WICHTIG: Hat gefehlt!
 Route::get('/', function () {
     return view('welcome');
 });
-
+/*
 Route::get('/Witt', function () {
     // Wenn der Nutzer schon eingeloggt ist -> Dashboard
     if (auth()->check()) {
         return redirect()->route('calendar.index'); // Oder 'dashboard', je nach deiner Route
     }
     // Wenn nicht eingeloggt -> Login
-    return redirect()->route('Log_FMS_in');
-});
-
+    return redirect()->route('login');
+});*/
+/*
 Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/dashboard', [VehicleController::class, 'index'])->name('dashboard');
@@ -93,4 +93,4 @@ Route::middleware(['auth', 'verified'])->group(function () {
   Route::post('/calendar/move', [CalendarController::class, 'moveAppointment'])->name('calendar.move');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__.'/auth.php';*/

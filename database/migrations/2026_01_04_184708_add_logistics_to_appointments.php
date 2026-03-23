@@ -12,8 +12,8 @@ return new class extends Migration
      public function up()
  {
      Schema::table('workshop_appointments', function (Blueprint $table) {
-         $table->string('transport_method')->nullable()->after('is_transport_organized');
-         $table->string('transport_billing_department')->nullable()->after('transport_driver_status');
+        // $table->string('transport_method')->nullable()->after('is_transport_organized');
+        // $table->string('transport_billing_department')->nullable()->after('transport_driver_status');
      });
  }
 

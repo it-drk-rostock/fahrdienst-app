@@ -20,11 +20,11 @@ class FleetProductionSeeder extends Seeder
         // Wir prüfen erst, ob er schon existiert, um Fehler zu vermeiden
         if (!User::where('email', 'admin@fms')->exists()) {
             User::create([
-                'name' => 'Fuhrparkleiter',
+                'name' => 'Fuhrparkadmin',
                 'email' => 'admin@fms',
-                'password' => Hash::make('password'),
+                'password' => Hash::make('password_initial'),
             ]);
-        }
+        }}
 /*
         // ==========================================
         // 2. STRUKTUR AUFBAUEN (Areas & CostCenters)

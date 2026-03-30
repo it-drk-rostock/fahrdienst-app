@@ -11,8 +11,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-       $middleware->trustProxies(at: '*');  //
-    })
+    // Nur die IP der Sophos Firewall angeben
+    $middleware->trustProxies(at: '192.168.253.254');
+        })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
     })->create();

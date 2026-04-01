@@ -20,9 +20,9 @@
                     <select name="cost_center_id" class="rounded border-gray-300 text-sm w-40 shadow-sm cursor-pointer" onchange="this.form.submit()">
                         <option value="">Alle</option>
                         @foreach($costCenters as $cc)
-                            <option value="{{ $cc->id }}" {{ request('cost_center_id') == $cc->id ? 'selected' : '' }}>
-                                {{ $cc->code }}
-                            </option>
+                          <option value="{{ $cc->id }}" {{ request('cost_center_id') == $cc->id ? 'selected' : '' }}>
+  {{ $cc->short_name ?: $cc->code }}
+</option>
                         @endforeach
                     </select>
                 </div>
@@ -82,7 +82,7 @@
 
                             <td class="px-6 py-4 whitespace-nowrap text-xs text-gray-600">
                                 <span class="px-2 py-1 rounded border border-gray-300 bg-white font-bold">
-                                    {{ $vehicle->costCenter->code ?? '-' }}
+                                    {{ $vehicle->costCenter ? ($vehicle->costCenter->short_name ?: $vehicle->costCenter->code) : '-' }}
                                 </span>
                             </td>
 
